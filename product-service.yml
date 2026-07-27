@@ -11,7 +11,18 @@ spring:
     show-sql: true
     database-platform: org.hibernate.dialect.MySQLDialect
 
-jwt:
-  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-  access-token-expiry: 9000000
-  refresh-token-expiry: 604800000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
+
+aws:
+  accessKeyId: YOUR_ACCESS_KEY_ID
+  secretKey: YOUR_SECRET_KEY
+  region: us-east-1
+
+  s3:
+    bucketName: myapp-product-images1996
